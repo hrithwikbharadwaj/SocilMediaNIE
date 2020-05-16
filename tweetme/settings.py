@@ -51,12 +51,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'tweetme.urls'
+var=os.path.join(BASE_DIR, "tweetme")
+
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['D:\Deshik\TwitterReactClone\\tweetme\\templates' ], # path for templates was not working for me so did this 
+        'DIRS':  [os.path.join(var, "templates")], # path for templates was not working for me so did this 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
